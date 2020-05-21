@@ -1,0 +1,227 @@
+@media screen and (min-width: 600px) {
+  body {
+    /* min-width: 1200px; */
+    margin: 0;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  /* header */
+
+  header {
+    color: white;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+  }
+
+  header img {
+    width: 125px;
+    height: auto;
+    margin-left: 30px;
+    margin-top: 6px;
+    float: left;
+  }
+
+  .head-menu ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    height: 75px;
+  }
+
+  .head-menu li {
+    float: left;
+    width: 100px;
+    line-height: 75px;
+  }
+  .head-menu li a {
+    color: #FFF;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+  .head-menu li a:hover {
+    background-color: #333;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  /* top-content */
+
+  .top-content {
+    background-image: url("../img/background.jpg");
+    background-repeat: ]no-repeat;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+  }
+
+  .top-content .container {
+    padding: 200px 0 120px;
+
+  }
+
+  .top-content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 5px;
+    line-height: 150%;
+  }
+
+  .top-content p {
+    margin-top: 5px;
+    line-height: 150%;
+  }
+
+  .btn {
+    display: inline-block;
+    border-radius: 5px;
+  }
+
+  .btn a {
+    padding: 10px 25px;
+    display: inline-block;
+  }
+
+  .sineup {
+    background-color: rgba(0, 153, 102, 0.8);
+    display: inline-block;
+    margin: 20px 0 15px;
+  }
+
+  .facebook {
+    background-color: rgba(59, 89, 152, 0.8);
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+
+  .twitter {
+    background-color: rgba(0, 172, 238, 0.8);
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  /* lesson-content */
+
+  .lesson-content {
+    background-color: #F7F7F7;
+  }
+
+  .lesson-content .container {
+    padding-bottom: 80px;
+  }
+
+  .lesson-content h2 {
+    text-align: center;
+    font-size: 25px;
+    padding: 50px 0;
+    color: #555;
+  }
+
+  .lesson {
+    width: 25%;
+    float: left;
+    text-align: center;
+  }
+
+  .lesson-image {
+    position: relative;
+    padding: 0 25px 25px;
+  }
+
+  .lesson-image img {
+    width: 100%;
+  }
+
+  .lesson-image p {
+    position: absolute;
+    color: #FFF;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  .lesson-text {
+    font-size: 15px;
+    color: #AAA;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 150%;
+  }
+
+  /* next-content */
+
+  .next-content {
+    text-align: center;
+    color: #999;
+  }
+
+  .next-content .container {
+    padding-top: 85px;
+    padding-bottom: 75px;
+  }
+
+  .next-content h2 {
+    font-size: 28px;
+  }
+
+  .next-content p {
+    font-size: 23px;
+    margin: 5px 0 55px;
+  }
+
+  .next-content-btn {
+    background-color: #82D4A1;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 5px #509467;
+  }
+
+  .next-content-btn a {
+    padding: 20px 40px;
+    display: inline-block;
+  }
+
+  .next-content-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+  }
+
+  /* footer */
+  footer {
+    border-top: solid 1px #EEE;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+  }
+
+  footer img {
+    width: 10%;
+  }
+
+  footer p {
+    color: #999;
+    font-size: 8px;
+  }
+}
