@@ -10,17 +10,26 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./css/pc.css">
   <link rel="stylesheet" type="text/css" href="./css/sp.css">
-  <!-- <script src="https://developers.google.com/speed/libraries/#jquery"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
   <header>
-    <img src="./img/logo_top.jpg">
+    <img id="top-btn" src="./img/logo_top.jpg">
     <div class="head-menu">
       <ul>
-        <li><a href="#">レッスン</a></li>
-        <li class="signup-show"><a href="#">新規登録</a></li>
-        <li id="login-show"><a href="#">ログイン</a></li>
+        <li>レッスン</li>
+        <li class="signup-show">新規登録</li>
+        <li id="login-show">ログイン</li>
+        <li>
+          <a href="#faq">FAQ</a>
+        </li>
+        <li>
+          <a href="#travel">Travel</a>
+        </li>
+        <li>
+          <a href="#questionnaire">アンケート</a>
+        </li>
       </ul>
     </div>
     <div><i class="fas fa-bars"></i></div>
@@ -100,37 +109,102 @@
         <div class="clear"></div>
       </div>
     </div>
-    <div class="faq-content">
-      <!-- <div class="container"> -->
-        <div class="heading">
-          <h2>FAQ</h2>
+    <div id="faq" class="faq-content">
+      <div class="heading">
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq">
+        <ul id="faq-list">
+          <li class="faq-list-item">
+            <h3 class="question">質問１</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>回答１</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">質問２</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>回答２</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">質問３</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>回答３</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="travel" class="slide-wrapper">
+      <h2 class="slide-title">プログラミング旅行</h2>
+      <div class="change-btn-wrapper">
+        <div class="change-btn prev-btn">←　前へ</div>
+        <div class="change-btn next-btn">次へ　→</div>
+      </div>
+      <!-- <div class="hide-btn-wrapper">
+        <div class="hide-btn" id="hide-btn">２番目を隠す</div>
+      </div> -->
+      <ul class="slides">
+        <li class="slide active"><img src="./img/austria.jpeg"></li>
+        <li class="slide"><img src="./img/china.jpeg"></li>
+        <li class="slide"><img src="./img/france.jpeg"></li>
+        <li class="slide"><img src="./img/german.jpeg"></li>
+        <li class="slide"><img src="./img/japan_bamboo.jpeg"></li>
+      </ul>
+      <div class="index-btn-wrapper">
+        <div class="index-btn">1</div>
+        <div class="index-btn">2</div>
+        <div class="index-btn">3</div>
+        <div class="index-btn">4</div>
+        <div class="index-btn">5</div>
+      </div>
+    </div>
+    <div id="questionnaire" class="questionnaire-form">
+      <div class="section-title">
+        <h3>アンケート</h3>
+      </div>
+      <div class="section-content">
+        <p>好きな言語をクリック</p>
+        <div class="option-wrapper">
+          <div class="option-group">
+            <div class="option-btn" data-option="1">１.　HTML/CSS</div>
+          </div>
+          <div class="option-group">
+            <div class="option-btn" data-option="2">２.　JavaScript</div>
+          </div>
+          <div class="option-group">
+            <div class="option-btn" data-option="3">３.　Ruby</div>
+          </div>
         </div>
-        <div class="faq">
-          <ul id="faq-list">
-            <li class="faq-list-item">
-              <h3 class="question">質問１</h3>
-              <span>+</span>
-              <div class="answer">
-                <p>回答１</p>
-              </div>
-            </li>
-            <li class="faq-list-item">
-              <h3 class="question">質問２</h3>
-              <span>+</span>
-              <div class="answer">
-                <p>回答２</p>
-              </div>
-            </li>
-            <li class="faq-list-item">
-              <h3 class="question">質問３</h3>
-              <span>+</span>
-              <div class="answer">
-                <p>回答３</p>
-              </div>
-            </li>
-          </ul>
+        <form id="form" class="form">
+          <div class="form-group">
+            <div>好きな言語：</div>
+            <select id="select-form" class="select-form">
+              <option value="0">選択してください</option>
+              <option value="1">HTML/CSS</option>
+              <option value="2">JavaScript</option>
+              <option value="3">Ruby</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <p id="error-message" class="error-message"></p>
+            <div>理由：</div>
+            <textarea id="text-form" class="text-form"></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit">送信</button>
+        </form>
+        <div class="output-wrapper">
+          <h4>結果</h4>
+          <div class="output-inner">
+            <p class="output-item">好きな言語：<span id="output-select"></span></p>
+            <p class="output-item">理由：<span id="output-text"></span></p>
+          </div>
         </div>
-      <!-- </div> -->
+      </div>
     </div>
     <div class="next-content">
       <div class="container">
@@ -141,8 +215,18 @@
     </div>
   </main>
   <footer>
-    <img src="./img/logo_bottom.jpg">
-    <p>Learn to code, learn to be creative.</p>
+    <div class="footer-logo">
+      <img src="./img/logo_bottom.jpg">
+      <p>Learn to code, learn to be creative.</p>
+    </div>
+    <div class="follow-us">
+      <a href="#" class="social-icon" target='_blank'>
+        <span class="fab fa-facebook-f fa-fw"></span>
+      </a>
+      <a href="#" class="social-icon" target='_blank'>
+        <span class="fab fa-twitter fa-fw"></span>
+      </a>
+    </div>
   </footer>
   <script src="js/script.js"></script>
 </body>
